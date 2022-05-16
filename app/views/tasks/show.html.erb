@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @task.content %>
+</p>
+<p>
+  <strong>Date:</strong>
+  <%= @task.start_time.strftime("%m-%d") %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'destroy', task_path(@task.id), method: :delete, data: {confirm: 'Are you sure?'}%>
+<%= link_to 'Back', tasks_path %>
